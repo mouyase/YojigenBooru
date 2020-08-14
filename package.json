@@ -3,21 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "yarn_serve": "yarn run serve",
+    "yarn_build": "yarn run build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "axios": "^0.19.2",
+    "vue-axios": "^2.1.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-router": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass-loader": "^9.0.2",
+    "vue-template-compiler": "^2.6.11",
+    "element-ui": "^2.13.2"
   },
   "browserslist": [
     "> 1%",

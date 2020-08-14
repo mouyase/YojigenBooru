@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ImageCardList :imageArray="imageArray"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ImageCardList from "@/components/ImageCardList";
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    ImageCardList,
+  },
+  data() {
+    return {
+      imageArray: []
+    }
+  },
+  mounted() {
+    this.$http.get('https://yande.re/post.json?limit=100&tags=rating%3As').then((response) => {
+      this.imageArray = response.data
+    })
   }
 }
 </script>
+
+<style lang="scss" scoped>
+</style>
